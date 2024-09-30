@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Socorre-me! - Resultados do quiz</title>
+      </head>
+      <body>
+            <main>
+                  <div id="quiz-result">
+                        <input type="range" class="quiz-range" min="1" max="19" step="12" value="13">
+                        <header>
+                              <h1>RESULTADO FINAL:</h1>
+                              <img src="../images/search docs.png" alt="Resultados de pesquisas">
+                        </header>
+                        <h2><strong>VOCÊ</strong> ESTÁ <strong>VICIADO NA PORNOGRAFIA</strong></h2>
+                        <div id="chart-container">
+                              <canvas id="results-pie-chart"></canvas>
+                        </div>
+                        <p>Você respondeu SIM a 3 ou mais questões.</p>
+                        <p>Isso significa, segundo os critérios da OMS você se enquadra na definição médica de dependência (vício) em pornografia e pode ser considerado viciado.</p>
+                        <button type="button" class="next-step-btn">CONTINUAR</button>
+                  </div>
+                  <div id="quiz-consolidation">
+                        <input type="range" class="quiz-range" min="1" max="19" step="13" value="14">
+                        <p>De acordo com suas respostas, parece que você pode estar enfrentando dificuldades com o vício em pornografia. Não se preocupe, estamos aqui para ajudar. Porque o que está acontecendo com você já aconteceu comigo também</p>
+                        <img src="../images/sad man siting.png" alt="Homem triste e sentado">
+                        <button type="button" class="next-step-btn">CONTINUAR</button>
+                  </div>
+                  <div id="quiz-final-question-1">
+                        <input type="range" class="quiz-range" min="1" max="19" step="14" value="15">
+                        <h2><strong>QUAL A SUA MAIOR DOR APÓS</strong> CONSUMIR PORNOGRAFIA?</h2>
+                        <div class="feelings-options">
+                              <button type="button" class="option">
+                                    <img src="../images/man with fault.png" alt="Homem se sentindo culpado">
+                                    <span>CULPA</span>
+                              </button>
+                              <button type="button" class="option">
+                                    <img src="../images/etc.png" alt="Homem sentindo vergonha">
+                                    <span>VERGONHA</span>
+                              </button>
+                              <button type="button" class="option">
+                                    <img src="../images/man with fear.png" alt="Homem sentindo medo">
+                                    <span>MEDO</span>
+                              </button>
+                              <button type="button" class="option">
+                                    <img src="../images/trash.png" alt="Caixote do lixo">
+                                    <span>SENTINDO UM LIXO</span>
+                              </button>
+                        </div>
+                  </div>
+                  <div id="quiz-final-question-2">
+                        <input type="range" class="quiz-range" min="1" max="19" step="15" value="16">
+                        <h2><strong>E SE VOCÊ PUDESSE</strong> TRANSFORMAR CADA TENTAÇÃO PORNOGRÁFICA EM UMA OPORTUNIDADE <strong>DE TRANSFORMAR À SUA VIDA PARA MELHOR, COMO VOCÊ SE SENTIRIA?</strong></h2>
+                        <div class="feelings-options">
+                              <button type="button" class="option">
+                                    <span class="emoji">&#x1F929</span>
+                                    <span>É tudo que eu mais quero!</span>
+                              </button>
+                              <button type="button" class="option">
+                                    <span class="emoji">&#x1F914</span>
+                                    <span>Duvido, mas estou disposto a tentar!</span>
+                              </button>
+                              <button type="button" class="option">
+                                    <span class="emoji">&#x1F616</span>
+                                    <span>Estou ansioso para saber como!</span>
+                              </button>
+                        </div>
+                  </div>
+                  <div id="quiz-final-question-3">
+                        <input type="range" class="quiz-range" min="1" max="19" step="16" value="17">
+                        <h2><strong>VOCÊ</strong>ACREDITA QUE ENTENDER MELHOR AS SUAS EMOÇÕES, E ENTENDER COMO O VÍCIO FUNCIONA NO CÉREBRO<strong>, PODERIA AJUDAR A MANTÊ-LO LIVRE DA PORNOGRAFIA?</strong></h2>
+                        <div class="feelings-options">
+                              <button type="button" class="option">
+                                    <span class="emoji">&#x1F917</span>
+                                    <span>Sim, isso faz muito sentido!</span>
+                              </button>
+                              <button type="button" class="option">
+                                    <span class="emoji">&#x1F929</span>
+                                    <span>Talvez, mas vale a pena tentar!</span>
+                              </button>
+                              <button type="button" class="option">
+                                    <span class="emoji">&#x1F928</span>
+                                    <span>Não tenho certeza, mas estou aberto a novas ideias</span>
+                              </button>
+                        </div>
+                  </div>
+                  <div id="quiz-final-question-4">
+                        <input type="range" class="quiz-range" min="1" max="19" step="17" value="18">
+                        <p>Você gostaria da sua Santidade de volta?</p>
+                        <img src="../images/praying on cross.png" alt="Orando na cruz">
+                        <p>Você gostaria de retomar a sua produtividade?</p>
+                        <img src="../images/productive system.png" alt="Sistema de produtividade">
+                        <p>Você gostaria de vencer esse vício que está trazendo consequências negativas para a sua vida?</p>
+                        <div class="next-step-options"></div>
+                              <button type="button" class="next-step-btn">SIM</button>
+                              <button type="button" class="next-step-btn">NÃO</button>
+                        </div>
+                  </div>
+                  <div id="quiz-final-question-5">
+                        <input type="range" class="quiz-range" min="1" max="19" step="18" value="19">
+                        <div id="compare-area">
+                              <div class="comparation">
+                                    <h3>AGORA</h3>
+                                    <img src="../images/man watching video.png" alt="Homem assistindo vídeos pornográficos">
+                              </div>
+                              <div class="comparation">
+                                    <h3>OBJETIVO</h3>
+                                    <img src="../images/man productive.png" alt="Homem produtivo">
+                              </div>
+                        </div>
+                        <h2><strong>VOCÊ ESTÁ PRESTES A CONHECER</strong> UMA FERRAMENTA QUE ESTÁ AJUDANDO CENTENAS DE ALUNOS A ANDAR EM LIBERDADE! <strong>CHEGA DE FICAR ARRASTANDO CORRENTES!</strong></h2>
+                        <a href="about:blank" target="_blank" rel="external"><button type="button" class="next-step-btn">QUERO CONHECER</button></a>
+                  </div>
+            </main>
+      </body>
+      <script src="../src/results.js" type="module"></script>
+</html>
