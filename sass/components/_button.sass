@@ -1,0 +1,22 @@
+@use "../base/_variables" as vars
+
+.next-step-btn
+      border: none
+      padding: 1rem 2rem
+      border-radius: 2rem
+      background-color: vars.$color-d
+      color: vars.$color-f
+      font: 700 1.5em 'Core Sans'
+      cursor: pointer
+      letter-spacing: 2px
+      width: 18rem
+      transition: all .4s ease-out
+
+      &:hover
+            -webkit-transform: scale(1.03)
+            transform: scale(1.03)
+
+      &.btn-sm
+            font-size: 1.2em
+            width: 100%
+            padding: 1rem .2rem
