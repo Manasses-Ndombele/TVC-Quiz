@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Página de resultados</title>
+      </head>
+      <body>
+            <h1>Página de resultados</h1>
+            <script>
+                  let xhr = new XMLHttpRequest()
+                  xhr.open('GET', '/respostas')
+                  xhr.setRequestHeader('Content-Type', 'application/json')
+                  xhr.onreadystatechange = () => {
+                        if (xhr.readyState == xhr.DONE) {
+                              if (xhr.status == 200) {
+                                    let response = JSON.parse(xhr.responseText)
+                                    console.log(response)
+                              }
+                        }
+                  }
+
+                  xhr.send()
+            </script>
+      </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Homepage</title>
+      </head>
+      <body>
+            <h1>Homepage</h1>
+            <button type="button" id="save-btn-1">Salvar resposta de: SIM</button>
+            <button type="button" id="save-btn-2">Salvar resposta de: NÃO</button>
+            <script>
+                  let saveBtn1 = document.getElementById('save-btn-1')
+                  let saveBtn2 = document.getElementById('save-btn-2')
+
+                  function saveAnswer(answer=Boolean) {
+                        let xhr = new XMLHttpRequest()
+                        xhr.open('POST', '/salvar-resposta')
+                        xhr.setRequestHeader('Content-Type', 'application/json')
+                        xhr.onreadystatechange = () => {
+                              if (xhr.readyState == xhr.DONE) {
+                                    if (xhr.status == 200) {
+                                          alert('Próxima questão')
+                                    }
+                              }
+                        }
+
+                        xhr.send(JSON.stringify({answer: answer}))
+                  }
+
+                  saveBtn1.onclick = () => { saveAnswer(true) }
+                  saveBtn2.onclick = () => { saveAnswer(false) }
+            </script>
+      </body>
+</html>
