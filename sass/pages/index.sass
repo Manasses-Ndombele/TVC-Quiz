@@ -2,59 +2,73 @@
 @use "../base/mixins" as mixs
 @use "../base/reset"
 @use "../components/main-container"
-@use "../components/quiz-range"
+@use "../components/progress-bar"
 @use "../components/h1"
 @use "../components/button"
 @use "../components/header"
 
-#logo
-      width: 15rem
+main
+      @include mixs.tablet()
+            width: 60%
+            margin: 0 auto
 
-.main-container
-      p
-            font-size: 1.3em
-            text-align: center
-            padding: 0rem .8rem
+      @include mixs.desktop()
+            width: 50%
 
-      span
-            &.emoji
-                  font-size: 4em
+      @include mixs.tvDesktop()
+            width: 40%
 
-      &.question
+      #logo
+            width: 8rem
+
+      .main-container
             p
-                  color: vars.$color-a
+                  font-size: 1.3em
+                  text-align: center
+                  padding: 0rem .8rem
 
-            @include mixs.nextStepOptions()
+            span
+                  &.emoji
+                        font-size: 4em
 
-#quiz-congratulations
-      .next-step-btn
-            font-size: 1.3em
-            width: auto
+            &.question
+                  p
+                        color: vars.$color-a
 
-#sex-options
-      display: flex
-      align-items: flex-start
-      justify-content: space-between
-      width: 100%
-      padding: .8rem
+                  @include mixs.nextStepOptions()
 
-      .option
-            width: 10rem
+      #quiz-congratulations
+            .next-step-btn
+                  font-size: 1.3em
+                  width: auto
+
+      #sex-options
             display: flex
-            flex-direction: column
-            align-items: center
+            align-items: flex-start
+            justify-content: space-between
+            width: 100%
+            padding: .8rem
+            @include mixs.tablet()
+                  justify-content: center
+                  gap: 3.5rem                  
 
-            img
-                  width: 100%
-                  height: 250px
-                  margin-bottom: .7rem
+            .option
+                  width: 10rem
+                  display: flex
+                  flex-direction: column
+                  align-items: center
 
-#quiz-danger-warning
-      .description-container
-            p
-                  &:first-child
-                        color: vars.$color-b
+                  img
+                        width: 100%
+                        height: 250px
                         margin-bottom: .7rem
 
-      button
-            width: auto
+      #quiz-danger-warning
+            .description-container
+                  p
+                        &:first-child
+                              color: vars.$color-b
+                              margin-bottom: .7rem
+
+            button
+                  width: auto

@@ -16,7 +16,6 @@
 
 body {
   background-color: #eae7dc;
-  overflow-y: hidden;
 }
 
 .main-container {
@@ -30,10 +29,18 @@ body {
   display: flex;
 }
 
-.quiz-range {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 80%;
+.progress-bar {
+  width: 90%;
+  height: 15px;
+  background-color: #128f8b;
+  border-radius: 0.6rem;
+  overflow: hidden;
+}
+.progress-bar .progress {
+  background-color: #fff;
+  height: 100%;
+  border-top-right-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
 }
 
 h1 {
@@ -80,58 +87,76 @@ header img {
   margin-right: 1.2rem;
 }
 
-#logo {
-  width: 15rem;
+@media screen and (min-width: 768px) {
+  main {
+    width: 60%;
+    margin: 0 auto;
+  }
 }
-
-.main-container p {
+@media screen and (min-width: 992px) {
+  main {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main {
+    width: 40%;
+  }
+}
+main #logo {
+  width: 8rem;
+}
+main .main-container p {
   font-size: 1.3em;
   text-align: center;
   padding: 0rem 0.8rem;
 }
-.main-container span.emoji {
+main .main-container span.emoji {
   font-size: 4em;
 }
-.main-container.question p {
+main .main-container.question p {
   color: #043540;
 }
-.main-container.question .next-step-options {
+main .main-container.question .next-step-options {
   display: flex;
   justify-content: space-between;
   width: 100%;
   gap: 1rem;
   padding: 0rem 0.8rem;
 }
-
-#quiz-congratulations .next-step-btn {
+main #quiz-congratulations .next-step-btn {
   font-size: 1.3em;
   width: auto;
 }
-
-#sex-options {
+main #sex-options {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
   padding: 0.8rem;
 }
-#sex-options .option {
+@media screen and (min-width: 768px) {
+  main #sex-options {
+    justify-content: center;
+    gap: 3.5rem;
+  }
+}
+main #sex-options .option {
   width: 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#sex-options .option img {
+main #sex-options .option img {
   width: 100%;
   height: 250px;
   margin-bottom: 0.7rem;
 }
-
-#quiz-danger-warning .description-container p:first-child {
+main #quiz-danger-warning .description-container p:first-child {
   color: #08a6a6;
   margin-bottom: 0.7rem;
 }
-#quiz-danger-warning button {
+main #quiz-danger-warning button {
   width: auto;
 }
 

@@ -5,3 +5,15 @@
             width: 100%
             gap: 1rem
             padding: 0rem .8rem
+
+@mixin tablet()
+      @media screen and (min-width: 768px)
+            @content
+
+@mixin desktop()
+      @media screen and (min-width: 992px)
+            @content
+
+@mixin tvDesktop()
+      @media screen and (min-width: 1200px)
+            @content
