@@ -1,0 +1,24 @@
+@mixin nextStepOptions()
+      .next-step-options
+            display: flex
+            justify-content: space-between
+            width: 100%
+            gap: 1rem
+            padding: 0rem .8rem
+            @include desktop()
+                  gap: 2rem
+
+            @include tvDesktop()
+                  gap: 2.5rem
+
+@mixin tablet()
+      @media screen and (min-width: 768px)
+            @content
+
+@mixin desktop()
+      @media screen and (min-width: 992px)
+            @content
+
+@mixin tvDesktop()
+      @media screen and (min-width: 1200px)
+            @content
