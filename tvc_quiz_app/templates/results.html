@@ -4,6 +4,7 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Socorre-me! - Resultados do quiz</title>
+            <link rel="shortcut icon" href="{{ url_for('static', filename='images/logo.ico') }}" type="image/x-icon">
             <link rel="stylesheet" href="{{ url_for('static', filename='css/results.min.css') }}">
       </head>
       <body>
@@ -22,7 +23,7 @@
                         </div>
                         <p>Você respondeu SIM a 3 ou mais questões.</p>
                         <p>Isso significa, segundo os critérios da OMS você se enquadra na definição médica de dependência (vício) em pornografia e pode ser considerado viciado.</p>
-                        <button type="button" class="next-step-btn btn-lg" data-step="12">CONTINUAR</button>
+                        <button type="button" class="next-step-btn btn-lg" data-step="12" data-status="none">CONTINUAR</button>
                   </div>
                   <div id="quiz-consolidation" class="main-container">
                         <div class="progress-bar">
@@ -30,7 +31,7 @@
                         </div>
                         <p>De acordo com suas respostas, parece que você pode estar enfrentando dificuldades com o vício em pornografia. Não se preocupe, estamos aqui para ajudar. Porque o que está acontecendo com você já aconteceu comigo também</p>
                         <img src="{{ url_for('static', filename='images/sad man siting.png') }}" alt="Homem triste e sentado">
-                        <button type="button" class="next-step-btn btn-lg" data-step="13">CONTINUAR</button>
+                        <button type="button" class="next-step-btn btn-lg" data-step="13" data-status="none">CONTINUAR</button>
                   </div>
                   <div id="quiz-final-question-1" class="main-container">
                         <div class="progress-bar">
@@ -38,19 +39,19 @@
                         </div>
                         <h3><strong>QUAL A SUA MAIOR DOR APÓS</strong> CONSUMIR PORNOGRAFIA?</h3>
                         <div class="feelings-options">
-                              <button type="button" class="option option-btn" data-step="14">
+                              <button type="button" class="option option-btn" data-step="14" data-status="none">
                                     <img src="{{ url_for('static', filename='images/man with fault.png') }}" alt="Homem se sentindo culpado">
                                     <span>CULPA</span>
                               </button>
-                              <button type="button" class="option option-btn" data-step="14">
+                              <button type="button" class="option option-btn" data-step="14" data-status="none">
                                     <img src="{{ url_for('static', filename='images/etc.png') }}" alt="Homem sentindo vergonha">
                                     <span>VERGONHA</span>
                               </button>
-                              <button type="button" class="option option-btn" data-step="14">
+                              <button type="button" class="option option-btn" data-step="14" data-status="none">
                                     <img src="{{ url_for('static', filename='images/man with fear.png') }}" alt="Homem sentindo medo">
                                     <span>MEDO</span>
                               </button>
-                              <button type="button" class="option option-btn" data-step="14">
+                              <button type="button" class="option option-btn" data-step="14" data-status="none">
                                     <img src="{{ url_for('static', filename='images/trash.png') }}" alt="Caixote do lixo">
                                     <span>SENTINDO UM LIXO</span>
                               </button>
@@ -62,15 +63,15 @@
                         </div>
                         <h3><strong>E SE VOCÊ PUDESSE</strong> TRANSFORMAR CADA TENTAÇÃO PORNOGRÁFICA EM UMA OPORTUNIDADE <strong>DE TRANSFORMAR À SUA VIDA PARA MELHOR, COMO VOCÊ SE SENTIRIA?</strong></h3>
                         <div class="feelings-options">
-                              <button type="button" class="option option-btn emoji" data-step="15">
+                              <button type="button" class="option option-btn emoji" data-step="15" data-status="none">
                                     <span class="emoji">&#x1F929</span>
                                     <span>É tudo que eu mais quero!</span>
                               </button>
-                              <button type="button" class="option option-btn emoji" data-step="15">
+                              <button type="button" class="option option-btn emoji" data-step="15" data-status="none">
                                     <span class="emoji">&#x1F914</span>
                                     <span>Duvido, mas estou disposto a tentar!</span>
                               </button>
-                              <button type="button" class="option option-btn emoji" data-step="15">
+                              <button type="button" class="option option-btn emoji" data-step="15" data-status="none">
                                     <span class="emoji">&#x1F616</span>
                                     <span>Estou ansioso para saber como!</span>
                               </button>
@@ -82,15 +83,15 @@
                         </div>
                         <h3><strong>VOCÊ</strong>ACREDITA QUE ENTENDER MELHOR AS SUAS EMOÇÕES, E ENTENDER COMO O VÍCIO FUNCIONA NO CÉREBRO<strong>, PODERIA AJUDAR A MANTÊ-LO LIVRE DA PORNOGRAFIA?</strong></h3>
                         <div class="feelings-options">
-                              <button type="button" class="option option-btn emoji" data-step="16">
+                              <button type="button" class="option option-btn emoji" data-step="16" data-status="none">
                                     <span class="emoji">&#x1F917</span>
                                     <span>Sim, isso faz muito sentido!</span>
                               </button>
-                              <button type="button" class="option option-btn emoji" data-step="16">
+                              <button type="button" class="option option-btn emoji" data-step="16" data-status="none">
                                     <span class="emoji">&#x1F929</span>
                                     <span>Talvez, mas vale a pena tentar!</span>
                               </button>
-                              <button type="button" class="option option-btn emoji" data-step="16">
+                              <button type="button" class="option option-btn emoji" data-step="16" data-status="none">
                                     <span class="emoji">&#x1F928</span>
                                     <span>Não tenho certeza, mas estou aberto a novas ideias</span>
                               </button>
@@ -106,8 +107,8 @@
                         <img src="{{ url_for('static', filename='images/productive system.png') }}" alt="Sistema de produtividade">
                         <p>Você gostaria de vencer esse vício que está trazendo consequências negativas para a sua vida?</p>
                         <div class="next-step-options">
-                              <button type="button" class="next-step-btn btn-sm" data-step="17">SIM</button>
-                              <button type="button" class="next-step-btn btn-sm" data-step="17">NÃO</button>
+                              <button type="button" class="next-step-btn btn-sm" data-step="17" data-status="none">SIM</button>
+                              <button type="button" class="next-step-btn btn-sm" data-step="17" data-status="none">NÃO</button>
                         </div>
                   </div>
                   <div id="quiz-final-question-5"  class="main-container">

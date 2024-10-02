@@ -4,6 +4,7 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Socorre-me!</title>
+            <link rel="shortcut icon" href="{{ url_for('static', filename='images/logo.ico') }}" type="image/x-icon">
             <link rel="stylesheet" href="{{ url_for('static', filename='css/index.min.css') }}">
       </head>
       <body>
@@ -15,7 +16,7 @@
                         <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logotipo da Socorre.me" id="logo">
                         <h1>Tenha uma <strong>verdadeira Metanoia</strong> para vencer o <strong>vício em pornografia</strong> imediatamente!</h1>
                         <p>TESTE DE 1 MINUTO</p>
-                        <button type="button" class="next-step-btn btn-lg" data-step="1">CONTINUAR</button>
+                        <button type="button" class="next-step-btn btn-lg" data-step="1" data-status="none">CONTINUAR</button>
                   </div>
                   <div id="quiz-congratulations" class="main-container">
                         <div class="progress-bar">
@@ -23,7 +24,7 @@
                         </div>
                         <span class="emoji">&#x1F44F</span>
                         <h1><strong>Parabéns você já está á frente</strong> da maioria das pessoas que pensam que a <strong>pornografia é um prazer inofensivo!</strong></h1>
-                        <button type="button" class="next-step-btn btn-lg" data-step="2">QUERO TER A METANOIA</button>
+                        <button type="button" class="next-step-btn btn-lg" data-step="2" data-status="none">QUERO TER A METANOIA</button>
                   </div>
                   <div id="quiz-sex-selecting" class="main-container">
                         <div class="progress-bar">
@@ -33,11 +34,11 @@
                         <div id="sex-options">
                               <div class="option">
                                     <img src="{{ url_for('static', filename='images/male.png') }}" alt="Homem">
-                                    <button type="button" class="next-step-btn btn-sm" data-step="3">SOU HOMEM</button>
+                                    <button type="button" class="next-step-btn btn-sm" data-step="3" data-status="none">SOU HOMEM</button>
                               </div>
                               <div class="option">
                                     <img src="{{ url_for('static', filename='images/female.png') }}" alt="Mulher">
-                                    <button type="button" class="next-step-btn btn-sm" data-step="3">SOU MULHER</button>
+                                    <button type="button" class="next-step-btn btn-sm" data-step="3" data-status="none">SOU MULHER</button>
                               </div>
                         </div>
                   </div>
@@ -53,7 +54,7 @@
                               <p>Este teste de Vício em Pornografia usa critérios da Associação Americana de Psiquiatria (DSM-IV) e da Organização Mundial de Saúde (CID-10) para avaliar o diagnóstico de dependência (vício).</p>
                               <p>As informações e opiniões contidas neste teste de Vício em Pornografia são de caráter informativo e educacional.</p>
                         </div>
-                        <button type="button" class="next-step-btn btn-lg" data-step="4">VAMOS COMEÇAR?</button>
+                        <button type="button" class="next-step-btn btn-lg" data-step="4" data-status="none">VAMOS COMEÇAR?</button>
                   </div>
                   <div id="quiz-first-question" class="main-container question">
                         <div class="progress-bar">
@@ -65,8 +66,8 @@
                         </header>
                         <p>Perda de tempo e de energia: Você já gastou uma quantidade significativa de tempo procurando, usando, planejando ou se recuperando do uso de pornografia? Você passou muito tempo pensando em usar? Você já escondeu ou minimizou seu uso?</p>
                         <div class="next-step-options">
-                              <button type="button" class="next-step-btn btn-sm" data-step="5">SIM</button>
-                              <button type="button" class="next-step-btn btn-sm" data-step="5">NÃO</button>
+                              <button type="button" class="next-step-btn btn-sm" data-step="5" data-status="true">SIM</button>
+                              <button type="button" class="next-step-btn btn-sm" data-step="5" data-status="false">NÃO</button>
                         </div>
                   </div>
                   <div id="quiz-second-question" class="main-container question">
@@ -76,8 +77,8 @@
                         <h1>2ª PERGUNTA: &#x1F612</h1>
                         <p>Sintomas de abstinência: Quando você para de usar pornografia, você experimenta sintomas físicos ou emocionais de abstinência? você teve alguns dos seguintes sintomas: irritabilidade, ansiedade, agitação, dores de cabeça, suores, náuseas ou vômitos?</p>
                         <div class="next-step-options">
-                              <button type="button" class="next-step-btn btn-sm" data-step="6">SIM</button>
-                              <button type="button" class="next-step-btn btn-sm" data-step="6">NÃO</button>
+                              <button type="button" class="next-step-btn btn-sm" data-step="6" data-status="true">SIM</button>
+                              <button type="button" class="next-step-btn btn-sm" data-step="6" data-status="false">NÃO</button>
                         </div>
                   </div>
                   <div id="quiz-third-question" class="main-container question">
@@ -87,8 +88,8 @@
                         <h1>3ª PERGUNTA: &#x1F552</h1>
                         <p>Dificuldade de controlar o uso: As vezes você usa mais pornografia ou por mais tempo que você gostaria de usar?</p>
                         <div class="next-step-options">
-                              <button type="button" class="next-step-btn btn-sm" data-step="7">SIM</button>
-                              <button type="button" class="next-step-btn btn-sm" data-step="7">NÃO</button>
+                              <button type="button" class="next-step-btn btn-sm" data-step="7" data-status="true">SIM</button>
+                              <button type="button" class="next-step-btn btn-sm" data-step="7" data-status="false">NÃO</button>
                         </div>
                   </div>
                   <div id="quiz-fourth-question" class="main-container question">
@@ -98,8 +99,8 @@
                         <h1>4ª PERGUNTA: &#x1F44E</h1>
                         <p>Consequências negativas: Você continuou a usar pornografia, apesar de ter percebido consequências negativas no seu humor, auto-estima, saúde, trabalho ou família?</p>
                         <div class="next-step-options">
-                              <button type="button" class="next-step-btn btn-sm" data-step="8">SIM</button>
-                              <button type="button" class="next-step-btn btn-sm" data-step="8">NÃO</button>
+                              <button type="button" class="next-step-btn btn-sm" data-step="8" data-status="true">SIM</button>
+                              <button type="button" class="next-step-btn btn-sm" data-step="8" data-status="false">NÃO</button>
                         </div>
                   </div>
                   <div id="quiz-fifth-question" class="main-container question">
@@ -109,8 +110,8 @@
                         <h1>5ª PERGUNTA: &#x1F61F</h1>
                         <p>Negligência e procrastinação: Você já adulterou ou reduziu atividades sociais, recreativas, de trabalho ou domésticas por causa do uso de pornografia?</p>
                         <div class="next-step-options">
-                              <button type="button" class="next-step-btn btn-sm" data-step="9">SIM</button>
-                              <button type="button" class="next-step-btn btn-sm" data-step="9">NÃO</button>
+                              <button type="button" class="next-step-btn btn-sm" data-step="9" data-status="true">SIM</button>
+                              <button type="button" class="next-step-btn btn-sm" data-step="9" data-status="false">NÃO</button>
                         </div>
                   </div>
                   <div id="quiz-sixth-question" class="main-container question">
@@ -123,8 +124,8 @@
                         </header>
                         <p>Perda de tempo e de energia: Você já gastou uma quantidade significativa de tempo procurando, usando, escondendo, planejando ou se recuperando do uso de pornografia? Você passou muito tempo pensando em usar? Você já escondeu ou minimizou o seu uso?</p>
                         <div class="next-step-options">
-                              <button type="button" class="next-step-btn btn-sm" data-step="10">SIM</button>
-                              <button type="button" class="next-step-btn btn-sm" data-step="10">NÃO</button>
+                              <button type="button" class="next-step-btn btn-sm" data-step="10" data-status="true">SIM</button>
+                              <button type="button" class="next-step-btn btn-sm" data-step="10" data-status="false">NÃO</button>
                         </div>
                   </div>
                   <div id="quiz-seventh-question" class="main-container question">
@@ -137,8 +138,8 @@
                         </header>
                         <p>Desejo de parar: Alguma vez você pensou em reduzir ou controlar o uso de pornografia? Você já fez tentativas mal sucedidas para parar com a pornografia ou controlar seu uso?</p>
                         <div class="next-step-options">
-                              <button type="button" class="next-step-btn btn-sm" data-step="11">SIM</button>
-                              <button type="button" class="next-step-btn btn-sm" data-step="11">NÃO</button>
+                              <button type="button" class="next-step-btn btn-sm" data-step="11" data-status="true">SIM</button>
+                              <button type="button" class="next-step-btn btn-sm" data-step="11" data-status="false">NÃO</button>
                         </div>
                   </div>
             </main>

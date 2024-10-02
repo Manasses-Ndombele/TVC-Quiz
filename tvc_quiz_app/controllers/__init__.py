@@ -33,7 +33,7 @@ def answers():
             answers = session['answers']
 
             if len(answers) > 0:
-                  return jsonify(answers)
+                  return jsonify({'answers': answers})
 
             else:
                   return jsonify(None)
