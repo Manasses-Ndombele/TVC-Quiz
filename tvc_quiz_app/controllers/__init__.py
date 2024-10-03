@@ -1,9 +1,14 @@
-from flask import render_template, request, session, jsonify, redirect
+from flask import render_template, request, session, jsonify, redirect, url_for
 from tvc_quiz_app import app
 
 @app.route('/')
 def home():
+      if 'answers' in session:
+            del session['answers']
+            session.modified = True
+
       session['first_quiz'] = True
+      session.modified = True
       return render_template('index.html')
 
 @app.route('/salvar-resposta', methods=['POST'])
@@ -15,6 +20,7 @@ def save_answer():
 
       else:
             session['answers'] = [answer]
+            session.modified = True
 
       return jsonify(True)
 
@@ -24,8 +30,7 @@ def results():
             if session['first_quiz'] == True:
                   return render_template('results.html')
 
-      else:
-            return redirect('/')
+      return redirect(url_for('home'))
 
 @app.route('/respostas', methods=['GET'])
 def answers():

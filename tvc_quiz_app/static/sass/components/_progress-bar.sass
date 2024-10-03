@@ -2,13 +2,23 @@
 
 .progress-bar
       width: 90%
-      height: 15px
-      background-color: vars.$color-h
-      border-radius: .6rem
-      overflow: hidden
+      height: 2.2rem
+      position: relative
 
-      .progress
-            background-color: vars.$color-f
-            height: 100%
-            border-top-right-radius: .6rem
-            border-bottom-right-radius: .6rem
+      .progress-container
+            height: 15px
+            background-color: vars.$color-h
+            border-radius: .6rem
+            overflow: hidden
+
+            .progress
+                  background-color: vars.$color-f
+                  height: 100%
+                  border-top-right-radius: .6rem
+                  border-bottom-right-radius: .6rem
+
+      .progress-number
+            position: absolute
+            font: 700 .8em vars.$font-b
+            color: vars.$color-a
+            bottom: 0
