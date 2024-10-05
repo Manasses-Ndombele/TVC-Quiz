@@ -1,1 +1,0 @@
-web: gunicorn tvc_quiz_app:app
