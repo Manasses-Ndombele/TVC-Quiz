@@ -6,9 +6,14 @@ Este é um *sistema web de um quiz* com o objetivo de fazer um teste de vício e
 
 Este projeto surgiu da grande preocupação mundial dos profissionais de saúde, quanto ao vício que vinha sendo normalizado e ignorado por muitos na sociedade, enquanto as pessoas hoje em dia estão cada vez mais concientes de que o cêrebro de alguém viciado em pornografia é semelhante ao de alguém viciado em drogas ou álcool.
 
+![Imagem do projeto](https://drive.google.com/uc?id=1_OXGAz6EryGq13_f9YsvXKUuz_2CDQKx)
+
 ## AUTOR DO PROJETO
 
 Este projeto está sendo desenvolvido por [Manassés Ndombele](https://manassesndombele.onrender.com) porém o projeto foi descoberto pelo desenvolvedor através da plataforma do [99Freelas](https://99freelas.com.br) originalmente idelizado por [Daniel S.](https://99freelas.com.br/cliente/Daniel)
+
+Demananda do projeto na 99Freelas: https://www.99freelas.com.br/project/quiz-dinamico-e-interativo-579246
+Link do site concluído: https://www.socorre.me/quiz/pages
 
 ## TECNOLOGIAS DO PROJETO
 
