@@ -29,6 +29,3 @@ Este projeto está sendo desenvolvido por [Manassés Ndombele](https://manassesn
 
 * AJAX
 * JSON
-* GIT
-* VS CODE
-* GOOGLE CHROME
